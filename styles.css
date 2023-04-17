@@ -1,0 +1,85 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(9,121,73);
+  background: linear-gradient(90deg, rgba(9,121,73,1) 0%, rgba(198,255,0,1) 100%);
+}
+
+.container{
+  width: 800px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.8);
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+input{
+  display: none;
+}
+
+.navigation{
+  position: absolute;
+  top: 750px;
+  left: 47.5%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.slides-bar{
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 200ms ease-in;
+}
+
+.slides-bar:hover{
+  background-color: #000;
+}
+
+.slide{
+  /* width = width do container das imagens / quantidade de imagens */
+  width: 20%; 
+  transition: 500ms ease;
+}
+
+.slides{
+  display: flex;
+  width: 500%;
+}
+
+#slide1:checked ~ .current{
+  margin-left: 0;
+}
+
+#slide2:checked ~ .current{
+  margin-left: -20%;
+}
+
+#slide3:checked ~ .current{
+  margin-left: -40%;
+}
+
+#slide4:checked ~ .current{
+  margin-left: -60%;
+}
+
+#slide5:checked ~ .current{
+  margin-left: -80%;
+}

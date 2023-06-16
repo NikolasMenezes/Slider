@@ -33,8 +33,9 @@ input{
 
 .navigation{
   position: absolute;
-  top: 750px;
-  left: 47.5%;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
   justify-content: center;
   gap: 15px;
